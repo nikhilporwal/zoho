@@ -1,12 +1,13 @@
-"use server"
+import { auth } from "@/lib/auth";
 
-import { cookies } from "next/headers";
+export async function apiFetch<T>(
+    endpoint: string,
+    options: RequestInit = {}
+): Promise<T> {
+    const session = await auth();
+    const token = session?.accessToken;
 
-export async function apiFetch<T>(url: string, options: RequestInit = {}) {
-    const cookieStore = await cookies();
-    const token = cookieStore.get("auth_token")?.value;
-
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${url}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${endpoint}`, {
         ...options,
         headers: {
             "Content-Type": "application/json",
@@ -14,11 +15,11 @@ export async function apiFetch<T>(url: string, options: RequestInit = {}) {
             ...options.headers,
         },
     });
-
+    
     if (!response.ok) {
-        const error = await response.json().catch(() => ({}));
-        throw new Error(error.message || "API Request Failed");
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || "API Request Failed");
     }
 
-    return response.json() as Promise<T>;
+    return response.json();
 }
