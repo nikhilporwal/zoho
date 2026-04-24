@@ -6,7 +6,7 @@ import { AlertCircle, RefreshCcw } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { startTransition } from "react";
 
-export default function InvoiceError({
+export default function RefusedError({
     error,
     reset,
 }: {
@@ -27,7 +27,7 @@ export default function InvoiceError({
 
             <CardHeader className="px-7 py-6">
                 <CardTitle className="text-[19px] font-bold text-foreground">
-                    New Invoices
+                    Refused Shifts
                 </CardTitle>
             </CardHeader>
 

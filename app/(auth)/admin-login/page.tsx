@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { loginAction } from "@/actions/auth.actions";
-// import { toast } from "sonner";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -33,11 +33,11 @@ export default function LoginPage() {
         startTransition(async () => {
             const result = await loginAction({ email, password });
             if (result.success) {
-                // toast.success("Login Successful");
+                toast.success("Login Successful");
                 router.refresh();
                 router.push("/dashboard");
             } else {
-                // toast.error(result.error || "Invalid Credentials");
+                toast.error(result.error || "Invalid Credentials");
             }
         });
     };
