@@ -29,6 +29,7 @@ export default async function DashboardLayout({
     approved: React.ReactNode
     notapproved: React.ReactNode
 }) {
+
     return (
         <div className="min-h-screen">
 
