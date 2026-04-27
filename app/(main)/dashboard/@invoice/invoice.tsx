@@ -7,7 +7,7 @@
 // import { Loader2, Search } from "lucide-react";
 
 // import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-// import { Input } from "@/components/ui/Input";
+// import { Input } from "@/components/ui/input";
 // import { DataTable } from "@/components/table/data-table";
 // import { invoiceTableColumns } from "@/features/invoice/invoice.table";
 // import { GenericRowSkeleton } from "@/components/skeletons/generic-row-skeleton";
@@ -171,7 +171,7 @@ import { fetchInvoicesAction } from "@/actions/dashboard.actions";
 import { Loader2, Search } from "lucide-react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input";
 import { DataTable } from "@/components/table/data-table";
 import { invoiceTableColumns } from "@/features/invoice/invoice.table";
 import { invoiceSkeletonColumns } from "@/features/invoice/invoice.skeleton";

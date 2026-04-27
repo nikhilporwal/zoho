@@ -16,7 +16,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { Loader2, Eye, EyeOff } from "lucide-react";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
 

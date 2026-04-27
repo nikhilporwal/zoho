@@ -4,7 +4,7 @@ import { Pagination, Record } from "@/types/dashboard.types";
 import { Loader2, Search } from "lucide-react";
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/Input";
+import { Input } from "@/components/ui/input";
 import { DataTable } from "@/components/table/data-table";
 import { invoiceSkeletonColumns } from "@/features/invoice/invoice.skeleton";
 import { useInfiniteSearch } from "@/hooks/use-infinite-data";
